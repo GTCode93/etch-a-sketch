@@ -10,3 +10,10 @@ Create flex-item styles for .gridItems
     * There may need to be a very thin 1px border for each grid, but let's see how that looks midway through.
     * These items are likely to just be reliant on flexing and not a set height and width.
 */
+
+.gridContainer {
+    border: 5px solid black;
+    display: flex;
+    height: 650px;
+    width: 650px;
+}
