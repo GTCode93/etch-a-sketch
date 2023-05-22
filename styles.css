@@ -19,10 +19,15 @@ Create flex-item styles for .gridItems
     height: 650px;
     width: 650px;
 }
-
+/* Eventually, I believe it's best to figure out how to make these two
+styles work with flex: 1; instead of set height and width. Maybe later on google "How do I create a grid in CSS" and see what comes up! */
 .gridItems {
-    border: 1px solid black;
+    border: 0.5px solid black;
     height: 38.625px;
     width: 38.625px;
+}
+
+.gridItemHover {
+    background-color: black;
 }
 
