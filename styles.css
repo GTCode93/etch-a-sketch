@@ -1,0 +1,12 @@
+/* 
+Create flex-container styles for .gridContainer
+    * Specific height and width, the container must be the exact same size no matter the amount of items.
+    * Must be a square since the flex-items width and height numbers will be the same (16x16, 32x32, etc.)
+    
+Create flex-item styles for .gridItems
+    * This style name will be applied to the grid items made by DOM methods in the JS file.
+    * The flex items must flex evenly to the grid.
+    * How do I remove margins and padding? The grid items must be right next to each other with no space
+    * There may need to be a very thin 1px border for each grid, but let's see how that looks midway through.
+    * These items are likely to just be reliant on flexing and not a set height and width.
+*/
