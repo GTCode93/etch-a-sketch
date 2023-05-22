@@ -12,8 +12,16 @@ Create flex-item styles for .gridItems
 */
 
 .gridContainer {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     display: flex;
     height: 650px;
     width: 650px;
 }
+
+.gridItems {
+    flex: 1;
+    border: 1px solid red;
+    height: 50px;
+    width: 50px;
+}
+
