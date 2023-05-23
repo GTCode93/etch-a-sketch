@@ -19,15 +19,18 @@ Create flex-item styles for .gridItems
     height: 650px;
     width: 650px;
 }
-/* Eventually, I believe it's best to figure out how to make these two
-styles work with flex: 1; instead of set height and width. Maybe later on google "How do I create a grid in CSS" and see what comes up! */
+
 .gridItems {
     border: 0.5px solid black;
     height: 38.625px;
     width: 38.625px;
 }
+/* Eventually, I believe it's best to figure out how to make these two
+styles work with flex: 1; instead of set height and width. 
+How do I create a CSS grid that can take on a number and the rows and columns will be even and wrap at a number the user inputs (16, 32, 100, etc.)?
+Maybe later on google "How do I create a grid in CSS" and see what comes up! */
 
-.gridItemHover {
-    background-color: black;
+.headerElement {
+    color: blue;
 }
 
