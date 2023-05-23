@@ -1,11 +1,24 @@
 const gridContainer = document.querySelector(".gridContainer");
 let userInputNumber; /* This variable is the W and H of the grid */
 
-for(let i=1; i <= (100); i++) {
+function createGrid(userInputNumber) {
+    for(let i=1; i <= (userInputNumber); i++) {
+        const gridRow = document.createElement("div");
+        gridRow.classList.add("gridRows");
+        gridContainer.appendChild(gridRow);
+        for(let i=1; i <= (userInputNumber); i++) {
+            const gridItem = document.createElement("div");
+            gridItem.classList.add("gridItems");
+            gridRow.appendChild(gridItem);
+        }
+    }
+}
+
+for(let i=1; i <= (16); i++) {
     const gridRow = document.createElement("div");
     gridRow.classList.add("gridRows");
     gridContainer.appendChild(gridRow);
-    for(let i=1; i <= (100); i++) {
+    for(let i=1; i <= (16); i++) {
         const gridItem = document.createElement("div");
         gridItem.classList.add("gridItems");
         gridRow.appendChild(gridItem);
@@ -20,9 +33,25 @@ const gridItemsHovered = document.querySelectorAll(".gridItems");
 
 for(let i=0; i < gridItemsHovered.length; i++) {
     gridItemsHovered[i].addEventListener("mouseover", function() {
-        gridItemsHovered[i].classList.toggle("gridItemsHovered");
+        gridItemsHovered[i].classList.add("gridItemsHovered");
     });
 }
+
+const gridButton = document.querySelector(".gridButton");
+gridButton.addEventListener("click", () => {
+    userInputNumber = prompt("Input a number 0-100! it's recommended to choose a number 16 and above.")
+    createGrid(userInputNumber);
+});
+
+
+
+
+
+
+
+
+
+
 
 
 
