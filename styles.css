@@ -14,16 +14,19 @@ Create flex-item styles for .gridItems
 .gridContainer {
     border: 5px solid black;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-content: flex-start;
     height: 650px;
     width: 650px;
 }
 
+.gridRows {
+    display: flex;
+    flex: 1;
+}
+
 .gridItems {
-    border: 0.5px solid black;
-    height: 38.625px;
-    width: 38.625px;
+    flex: 1;
 }
 
 .headerElement {
@@ -34,7 +37,20 @@ Create flex-item styles for .gridItems
     background-color: black;
 }
 
-/* Eventually, I believe it's best to figure out how to make these two
-styles work with flex: 1; instead of set height and width. 
-How do I create a CSS grid that can take on a number and the rows and columns will be even and wrap at a number the user inputs (16, 32, 100, etc.)?
-Maybe later on google "How do I create a grid in CSS" and see what comes up! */
+/* Eventually, I believe it's best to figure out how to make these two styles work with flex: 1; instead of set height and width. 
+How do I create a CSS grid that can take on a number and the rows and columns will be even and wrap at a number the user inputs (16x16 up to 100x100, no more no less)*/
+
+/* 
+Brainstorming:
+* My first thought is creating an algorithm that can figure out the exact height and width that the squares need to be to fit on one line. 
+16 squares require each square to be 38.625px H and W.
+18 squares require each square to be 34.109px H and W.
+But, I think this would be a bit too tedious and mathy to figure it out, though I'm sure it's possible
+
+* My next thought is I can create a new element that will be inside the grid container that mirrors the exact same amount of rows or columns.
+It'll be like this:
+gridContainer > gridRows/Columns > gridItems
+This is so I can use purely DOM methods to determine how many columns there will be, and THEN to those gridRows/Columns I'll add the appropriate amount of gridItems that the user inputs. This is a lot more possible in my eyes since it works purely off JavaScript while CSS just needs the items to fill out a row like normal! 
+
+
+*/

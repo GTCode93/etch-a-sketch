@@ -1,10 +1,17 @@
 const gridContainer = document.querySelector(".gridContainer");
+let userInputNumber; /* This variable is the W and H of the grid */
 
-for(let i=1; i <= (16*16); i++) {
-    const gridItem = document.createElement("div");
-    gridItem.classList.add("gridItems");
-    gridContainer.appendChild(gridItem);
+for(let i=1; i <= (100); i++) {
+    const gridRow = document.createElement("div");
+    gridRow.classList.add("gridRows");
+    gridContainer.appendChild(gridRow);
+    for(let i=1; i <= (100); i++) {
+        const gridItem = document.createElement("div");
+        gridItem.classList.add("gridItems");
+        gridRow.appendChild(gridItem);
+    }
 }
+
 /* This loop works by creating a new node every iteration. Without including the createElement and classList.add declaration in the loop, the appendChild declaration will just repeatedly replace the node created from the last iteration. */
 
 /* Later, look to take the condition's equation (16*16) and apply the 16 to a variable so the user can use make a grid with however many items they want. I will first need to figure out the grid styling first with FlexBox*/
