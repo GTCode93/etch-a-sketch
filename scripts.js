@@ -1,7 +1,6 @@
 const gridContainer = document.querySelector(".gridContainer");
 let userInputNumber;
 
-/* replace with for...while loop?? */
 function createGrid(userInputNumber) {
     for(let i=1; i <= (userInputNumber); i++) {
         const gridRow = document.createElement("div");
@@ -42,8 +41,12 @@ for(let i=1; i <= (16); i++) {
 const gridButton = document.querySelector(".gridButton");
 gridButton.addEventListener("click", () => {
     userInputNumber = prompt("Input a number 0-100! it's recommended to choose a number 16 and above.")
-    deleteGrid();
-    createGrid(userInputNumber);
+    if (userInputNumber > 100) {
+        alert("You cannot input a number higher than 100! Please try again.")
+    } else {
+        deleteGrid();
+        createGrid(userInputNumber);
+    }
 });
 
 /* 
