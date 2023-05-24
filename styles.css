@@ -17,11 +17,7 @@
     flex: 1;
 }
 
-.headerElement {
-    color: blue;
-}
-
-.gridItemsHovered {
+.gridItemHovered {
     background-color: black;
 }
 
